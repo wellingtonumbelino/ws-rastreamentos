@@ -1,0 +1,40 @@
+{
+  "AB12345CD6": {
+    "data": [
+      {
+        "date": "2025-10-18",
+        "status": "Em trânsito",
+        "local": "Fortaleza - CE",
+        "description": "Seu pacote saiu do centro de triagem e está a caminho do hub regional."
+      },
+      {
+        "date": "2025-10-16",
+        "status": "Recebido no centro de distribuição",
+        "local": "Fortaleza - CE",
+        "description": "O pacote foi recebido no centro de distribuição e será encaminhado para a rota."
+      },
+      {
+        "date": "2025-10-14",
+        "status": "Postado",
+        "local": "Fortaleza - CE",
+        "description": "Objeto postado pelo remetente e aguardando triagem."
+      }
+    ]
+  },
+  "XY98765ZT3": {
+    "data": [
+      {
+        "date": "2025-10-15",
+        "status": "Entregue",
+        "local": "Destinatário",
+        "description": "Seu pacote foi entregue com sucesso."
+      },
+      {
+        "date": "2025-10-13",
+        "status": "Saiu para entrega",
+        "local": "São Paulo - SP",
+        "description": "Veículo de entrega saiu com o pacote para tentativa de entrega."
+      }
+    ]
+  }
+}

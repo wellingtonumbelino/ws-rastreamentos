@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #2B4788;
+  --color-primary-hover: #233862;
+  --color-on-primary: #FFFFFF;
+
+  --color-secondary: #F99746;
+  --color-secondary-hover: #D3671E;
+  --color-on-secondary: #FFFFFF;
+
+  --color-border: #E0E0E0;
+  --color-placeholder: #4F4F4F;
+
+  --color-background: #FDF9F5;
+  --color-text-primary: #233862;
+  --color-text-secondary: #4F4F4F;
+}
