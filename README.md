@@ -40,4 +40,5 @@ index.html
 
 Planejamento do projeto em:
 
-- [ROADMAP.md](./docs/ROADMAP.md)
+- [Roadmap](./docs/roadmapp.md.md)
+- [Decisões Técnicas](./docs/technical-decisions.md)
