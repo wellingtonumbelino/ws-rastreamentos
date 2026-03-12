@@ -2,28 +2,28 @@
 
 O WS Rastreamento é um site de rastreamento de pacotes para uma transportadora fictícia, permitindo consultar o status de uma entrega através de um código de rastreamento.
 
-## Demonstração
+## 🖼️ Demonstração
 
 (em breve)
 
-## Funcionalidades
+## 🛠️ Funcionalidades
 
 - Buscar por código de rastreamento
 - Exibição de eventos de entrega
 - Linha do tempo do status do pacote
 
-## Tecnologias
+## 💻 Tecnologias
 
 - HTML 5
 - CSS 3
 - JavaScript
 
-## Como executar o projeto
+## ⚙️ Como executar o projeto
 
 Clone do repositório:
 
 ```bash
-https://github.com/wellingtonumbelino/ws-rastreamentos.git
+git clone https://github.com/wellingtonumbelino/ws-rastreamentos.git
 ```
 
 Abra o arquivo no navegador:
@@ -32,11 +32,11 @@ Abra o arquivo no navegador:
 index.html
 ```
 
-## Estrutura do Projeto
+## 🏛️ Estrutura do Projeto
 
 (em breve)
 
-## Documentação
+## 📄 Documentação
 
 Planejamento do projeto em:
 
