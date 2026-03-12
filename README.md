@@ -42,3 +42,4 @@ Planejamento do projeto em:
 
 - [Roadmap](./docs/roadmap.md)
 - [Decisões Técnicas](./docs/technical-decisions.md)
+- [Escopo do Projeto](./docs/scope.md)
