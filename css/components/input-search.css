@@ -1,0 +1,39 @@
+#input-search {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  width: 18.75rem;
+  height: 2.5rem;
+}
+
+#input-search:focus-within {
+  outline: 2px solid blue;
+}
+
+#input-search input {
+  border: none;
+  padding: 0.5rem;
+  flex: 1;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+}
+
+#input-search button {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#input-search button:hover {
+  background-color: #f0f0f0;
+}
+
+#input-search button img {
+  width: 1.25rem;
+  height: auto;
+}

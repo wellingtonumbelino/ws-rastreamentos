@@ -1,0 +1,47 @@
+class InputSearch extends HTMLElement {
+  connectedCallback() {
+    this.render();
+    this.setupEventListener();
+  }
+
+  render() {
+    this.innerHTML = `
+      <div id="input-search">
+        <input type="text" placeholder="Digite o código de rastreamento" />
+        <button>
+          <img src="images/icons/search.svg" alt="Buscar" />
+        </button>
+      </div>
+    `
+  }
+
+  setupEventListener() {
+    const btn = this.querySelector('button');
+
+    if (btn) {
+      btn.onclick = () => this.handleSearch();
+    }
+  }
+
+  handleSearch() {
+    const durationAttr = this.getAttribute('duration') || 3000;
+    const duration = parseInt(durationAttr);
+    const spinner = document.createElement('spinner-loading');
+    const btn = this.querySelector('button');
+    const input = this.querySelector('input');
+
+    document.body.appendChild(spinner);
+    btn.disabled = true;
+    input.disabled = true;
+    this.style.opacity = '0.6';
+    
+    setTimeout(() => {
+      spinner.remove();
+      btn.disabled = false;
+      input.disabled = false;
+      this.style.opacity = '1';
+    }, duration);
+  }
+}
+
+customElements.define('input-search', InputSearch);

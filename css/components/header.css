@@ -1,10 +1,14 @@
-header .tracker-menu {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
+#main-header {
+  display: flex;
+  width: 100%;
+  height: fit-content;
   padding: 1rem;
+  background-color: black;
+  color: #fff;
+  align-items: center;
 }
 
-.tracker-menu-content .tracker-menu-system-name {
-  font-size: 1rem;
-  font-weight: 700;
+#main-header img {
+  width: 2.5rem;
+  height: auto;
 }
