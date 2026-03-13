@@ -1,22 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WS Rastreamento</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <main-header></main-header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WS Rastreamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <main-header></main-header>
+    </header>
 
-  <main>
-    <h1>Rastreio prático e rápido é com a WS Rastreamento</h1>
-    <input-search duration="5000"></input-search>
-  </main>
-  
-  <script type="module" src="js/main.js"></script>
-</body>
+    <main>
+      <section class="title-section">
+        <h1>WS Rastreamento</h1>
+        <h2>Rastreio prático, rápido e transparente.</h2>
+      </section>
+      <input-search duration="3000"></input-search>
+      <result-card></result-card>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>

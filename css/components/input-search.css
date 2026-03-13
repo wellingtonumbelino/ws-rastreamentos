@@ -16,6 +16,12 @@
   flex: 1;
   border-radius: 0.5rem 0 0 0.5rem;
   outline: none;
+  text-transform: uppercase;
+}
+
+#input-search input::placeholder {
+  text-transform: none;
+  color: #888;
 }
 
 #input-search button {

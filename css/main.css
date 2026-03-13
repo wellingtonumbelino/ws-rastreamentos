@@ -1,3 +1,4 @@
+@import url("./components/card.css");
 @import url("./components/header.css");
 @import url("./components/input-search.css");
 @import url("./components/spinner.css");
@@ -15,7 +16,7 @@ body,
 
 body {
   background-color: aquamarine;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body > main {
@@ -27,4 +28,8 @@ body > main {
 
 body > main > h1 {
   margin-top: 4rem;
+}
+
+body .title-section {
+  text-align: center;
 }
