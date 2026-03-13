@@ -30,8 +30,26 @@ class Card extends HTMLElement {
       <section class="result-status ${data.status.toLowerCase()}">
         <strong>Status:</strong> ${data.status}
       </section>
-      <timeline-step status="${data.status}" date="2023-10-01" location="São Paulo, SP"></timeline-step>
+      <div id="timeline-container"></div>
     `;
+
+    requestAnimationFrame(() => {
+      content.classList.add("fade-in");
+    });
+
+    const container = this.querySelector("#timeline-container");
+
+    data.history.forEach((item, index) => {
+      const step = document.createElement("timeline-step");
+      step.setAttribute("description", item.description);
+      step.setAttribute("date", item.date);
+      step.setAttribute("location", item.location);
+      container.appendChild(step);
+
+      setTimeout(() => {
+        if (step) step.classList.add("fade-in");
+      }, index * 150);
+    });
   }
 }
 

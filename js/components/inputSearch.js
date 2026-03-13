@@ -23,9 +23,9 @@ class InputSearch extends HTMLElement {
     }
   }
 
-  handleSearch() {
+  async handleSearch() {
     const duration = parseInt(this.getAttribute("duration") || 3000);
-    const inputCode = this.querySelector("input").value.trim();
+    const inputCode = this.querySelector("input").value.trim().toUpperCase();
 
     if (!inputCode)
       return alert("Por favor, insira um código de rastreamento válido.");
@@ -39,21 +39,32 @@ class InputSearch extends HTMLElement {
     input.disabled = true;
     this.style.opacity = "0.6";
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("./data/tracking.json");
+      const data = await response.json();
+
+      if (data[inputCode]) {
+        const card = document.querySelector("result-card");
+
+        if (card) {
+          card.showCard({
+            trackingCode: inputCode,
+            status: data[inputCode].status,
+            history: data[inputCode].history,
+          });
+        } else {
+          alert("Card de resultado não encontrado.");
+        }
+      }
+    } catch (error) {
+      console.error("Erro ao buscar dados de rastreamento:", error);
+    } finally {
       spinner.remove();
       btn.disabled = false;
       input.disabled = false;
       this.style.opacity = "1";
-
-      const card = document.querySelector("result-card");
-
-      if (card) {
-        card.showCard({
-          trackingCode: inputCode,
-          status: "Em trânsito",
-        });
-      }
-    }, duration);
+      btn.disabled = false;
+    }
   }
 }
 

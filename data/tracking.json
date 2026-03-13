@@ -1,0 +1,22 @@
+{
+  "AAA00AA": {
+    "status": "Em trânsito",
+    "history": [
+      {
+        "description": "Objeto saiu para entrega ao destinatário",
+        "date": "13/03/2026 09:00",
+        "location": "Unidade de Distribuição - São Paulo/SP"
+      },
+      {
+        "description": "Objeto em trânsito - por favor aguarde",
+        "date": "12/03/2026 14:30",
+        "location": "Unidade de Tratamento - Rio de Janeiro/RJ"
+      },
+      {
+        "description": "Objeto postado",
+        "date": "11/03/2026 10:00",
+        "location": "Agência dos Correios - Curitiba/PR"
+      }
+    ]
+  }
+}

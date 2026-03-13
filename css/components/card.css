@@ -18,3 +18,16 @@
   border-top: 1px solid #eee;
   margin: 0.9375rem 0;
 }
+
+#panel-card .card-content #timeline-container .timeline-step {
+  opacity: 0;
+  transform: translateY(0.625rem);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

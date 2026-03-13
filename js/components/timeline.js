@@ -1,13 +1,13 @@
 class TimelineStep extends HTMLElement {
   connectedCallback() {
-    this.render();
+    const desc = this.getAttribute("description") || "";
+    const date = this.getAttribute("date") || "";
+    const location = this.getAttribute("location") || "";
+
+    this.render(desc, date, location);
   }
 
-  render(
-    description = "Objeto recebido na unidade",
-    date = "2026-01-01:T00:00:00",
-    location = "Local desconhecido",
-  ) {
+  render(description, date, location) {
     this.innerHTML = `
       <div class="timeline-step">
         <div class="step-indicator"></div>
