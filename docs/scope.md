@@ -1,10 +1,14 @@
 # Escopo do Projeto - WS Rastreamento
 
-## 1. Visão Geral do Projeto
+## 1. Visão Geral do Projeto 👓
 
 O **WS Rastreamento** é um site que permite aos usuários acompanhar o envio de suas encomendas. O objetivo do projeto é oferecer uma solução simples e intuitiva para visualizar, em detalhes, o status de rastreamento dos pacotes, utilizando tecnologias modernas de desenvolvimento web.
 
-# 2. Objetivo do Projeto
+### Observação
+
+Esse projeto foi desenvolvido com fins **educacionais e de portfólio**, com o objetivo de praticar conceitos de desenvolvimento web e organização de projetos.
+
+## 2. Objetivo do Projeto 🎯
 
 Permitir que os usuários realizem a busca por suas encomendas de forma simples e rápida.
 
@@ -15,7 +19,7 @@ Permitir que os usuários realizem a busca por suas encomendas de forma simples 
 - Aplicar boas práticas de desenvolvimento
 - Utilizar as tecnologias básicas do ecossistema web
 
-# 3. Estrutura da Interface
+## 3. Estrutura da Interface 🎨
 
 As principais seções do sistemas estão dividas da seguinte forma:
 
@@ -43,7 +47,7 @@ Ações de interação com o usuário como:
 - Listagem das informações
 - Linha do tempo
 
-# 4. Funcionalidades / Requisitos
+## 4. Funcionalidades / Requisitos 📋
 
 Lista das funcionalidades previstas para o projeto
 
@@ -57,7 +61,7 @@ Lista das funcionalidades previstas para o projeto
 - O sistema processa a busca informações pelo código informado
 - O sistema exibe o resultado encontrado
 
-# 5. Tecnologias Utilizadas
+## 5. Tecnologias Utilizadas 💻
 
 Lista de tecnologias utilizadas no projeto.
 
@@ -73,11 +77,11 @@ Lista de tecnologias utilizadas no projeto.
 - GitHub
 - VS Code
 
-# 6. Estrutura do Projeto
+## 6. Estrutura do Projeto 🏛️
 
 (em breve)
 
-# 7. Limitações do Projeto
+## 7. Limitações do Projeto 📏
 
 Lista das limitações da versão atual:
 
@@ -85,7 +89,3 @@ Lista das limitações da versão atual:
 - Não utiliza banco de dados
 - Dados simulados em JavaScript
 - Apenas uma página principal
-
-# Observação
-
-Esse projeto foi desenvolvido com fins **educacionais e de portfólio**, com o objetivo de praticar conceitos de desenvolvimento web e organização de projetos.
