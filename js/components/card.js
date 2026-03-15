@@ -33,10 +33,6 @@ class Card extends HTMLElement {
       <div id="timeline-container"></div>
     `;
 
-    requestAnimationFrame(() => {
-      content.classList.add("fade-in");
-    });
-
     const container = this.querySelector("#timeline-container");
 
     data.history.forEach((item, index) => {
