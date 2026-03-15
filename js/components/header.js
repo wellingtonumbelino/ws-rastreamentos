@@ -6,11 +6,19 @@ class MainHeader extends HTMLElement {
   render() {
     this.innerHTML = `
       <header id="main-header">
-        <img src="images/logo.png" alt="WS Rastreamentos" />
-        <div>WS Rastreamentos</div>
+        <section class="info-container">
+          <img src="images/logo.png" alt="WS Rastreamentos" />
+          <div>WS Rastreamentos</div>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="#support">Ajuda</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
       </header>
-    `
+    `;
   }
 }
 
-customElements.define('main-header', MainHeader);
+customElements.define("main-header", MainHeader);
