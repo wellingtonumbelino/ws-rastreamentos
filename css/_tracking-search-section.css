@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .tracking-search-section .tracking-search-container {

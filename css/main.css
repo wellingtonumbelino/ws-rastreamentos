@@ -21,9 +21,26 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.search-active .width-limiter > main {
+  min-height: auto;
+  justify-content: flex-start;
+}
+
+body.search-active .hero-section,
+body.search-active .tracking-search-section {
+  transform: translateY(-24px);
+}
+
 .width-limiter {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.width-limiter > main {
+  min-height: calc(100dvh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #app-header.app-header {

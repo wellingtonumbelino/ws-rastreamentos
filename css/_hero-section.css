@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 
 .hero-section h1 {
