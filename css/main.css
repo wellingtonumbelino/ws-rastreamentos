@@ -21,9 +21,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-header {
+.width-limiter {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#app-header.app-header {
   position: sticky;
   display: flex;
+  border-bottom: 1px solid var(--color-bg-subtle);
+  background-color: var(--color-bg-main);
 }
 
 h1 {

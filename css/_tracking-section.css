@@ -19,6 +19,72 @@
   gap: 2rem;
 }
 
+.tracking-location-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tracking-location-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking-status-label {
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.tracking-location-text h1 {
+  color: black;
+  font-weight: var(--font-weight-black);
+  margin: 0;
+  padding: 0;
+}
+
+.tracking-status-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tracking-status-info-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  gap: 0.5rem;
+}
+
+.tracking-status-info-card .label {
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.tracking-status-info-card .info-text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: black;
+}
+
+.tracking-status-info-card.forecast {
+  background-color: var(--color-primary-light);
+}
+
+.tracking-status-info-card.forecast .label {
+  color: var(--color-primary-dark);
+}
+
+.tracking-status-info-card.update {
+  background-color: var(--color-bg-subtle);
+}
+
+.tracking-status-info-card.update .label {
+  color: var(--color-text-secondary);
+}
+
 .tracking-results-section
   .tracking-results-container
   .tracking-order-details-container {

@@ -13,60 +13,83 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header>
-      <nav id="main-menu" class="main-menu">
+    <header id="app-header" class="app-header">
+      <nav id="main-menu" class="main-menu width-limiter">
         <div class="menu-logo">
           <h1>WS Rastreamento</h1>
         </div>
       </nav>
     </header>
 
-    <main>
-      <section class="hero-section">
-        <h1>Rastreio prático, rápido e transparente</h1>
-        <span>Acompanhe sua encomenda em tempo real.</span>
-      </section>
+    <div class="width-limiter">
+      <main>
+        <section class="hero-section">
+          <h1>Rastreio prático, rápido e transparente</h1>
+          <span>Acompanhe sua encomenda em tempo real.</span>
+        </section>
 
-      <section class="tracking-search-section">
-        <div class="tracking-search-container">
-          <input
-            type="text"
-            placeholder="Digite seu código (ex: WS923874923BR)"
-          />
-          <button class="btn-primary" id="trk-btn">Consultar</button>
-        </div>
-      </section>
+        <section class="tracking-search-section">
+          <div class="tracking-search-container">
+            <input
+              type="text"
+              placeholder="Digite seu código (ex: WS923874923BR)"
+            />
+            <button class="btn-primary" id="trk-btn">Consultar</button>
+          </div>
+        </section>
 
-      <section class="tracking-results-section">
-        <div class="tracking-results-container">
-          <div class="tracking-status-container">
-            <div class="tracking-location">
-              <h1>Location</h1>
-            </div>
+        <section class="tracking-results-section">
+          <div class="tracking-results-container">
+            <div class="tracking-status-container">
+              <div class="tracking-location">
+                <header class="tracking-location-header">
+                  <div class="tracking-location-text">
+                    <span class="tracking-status-label">Status atual</span>
+                    <h1>Em Transporte</h1>
+                  </div>
 
-            <div class="tracking-history">
-              <div class="tracking-timeline">
-                <h1>Timeline</h1>
+                  <div class="tracking-status-info">
+                    <div class="tracking-status-info-card forecast">
+                      <span class="label">previsão</span>
+                      <span class="info-text">15 JAN 2025</span>
+                    </div>
+
+                    <div class="tracking-status-info-card update">
+                      <span class="label">última atualização</span>
+                      <span class="info-text">Hoje, 10:49</span>
+                    </div>
+                  </div>
+                </header>
+
+                <div class="tracking-location-route">
+                  Rota: São Paulo - SP, Brasil
+                </div>
               </div>
 
-              <div class="tracking-route">
-                <h1>Route Details</h1>
+              <div class="tracking-history">
+                <div class="tracking-timeline">
+                  <h1>Timeline</h1>
+                </div>
+
+                <div class="tracking-route">
+                  <h1>Route Details</h1>
+                </div>
+              </div>
+            </div>
+
+            <div class="tracking-order-details-container">
+              <div class="tracking-order-info">
+                <h1>Order Info Details</h1>
+              </div>
+
+              <div class="tracking-support-info">
+                <h1>Support</h1>
               </div>
             </div>
           </div>
-
-          <div class="tracking-order-details-container">
-            <div class="tracking-order-info">
-              <h1>Order Info Details</h1>
-            </div>
-
-            <div class="tracking-support-info">
-              <h1>Support</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
 
     <script type="module" src="js/main.js"></script>
   </body>
