@@ -28,6 +28,7 @@ body.search-active .width-limiter > main {
 
 body.search-active .hero-section,
 body.search-active .tracking-search-section {
+  margin-top: 1.5rem;
   transform: translateY(-24px);
 }
 
@@ -61,6 +62,8 @@ h1 {
   color: var(--color-text-on-primary);
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
   transition: background-color 0.2s ease;
   text-transform: uppercase;
   cursor: pointer;

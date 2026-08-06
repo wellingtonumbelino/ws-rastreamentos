@@ -24,6 +24,10 @@
   border: none;
   border-radius: var(--radius-md);
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-base);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
   background-color: transparent;
   width: 21.875rem;
   padding-left: 1rem;
