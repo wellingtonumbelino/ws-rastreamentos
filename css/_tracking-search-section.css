@@ -1,0 +1,41 @@
+.tracking-search-section {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.tracking-search-section .tracking-search-container {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-accent);
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.tracking-search-section .tracking-search-container input {
+  flex: 1;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  background-color: transparent;
+  width: 21.875rem;
+  padding-left: 1rem;
+}
+
+.tracking-search-section .tracking-search-container input:focus {
+  outline: none;
+}
+
+.tracking-search-section .tracking-search-container input::placeholder {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.tracking-search-section .tracking-search-container button {
+  padding: 1rem 2rem;
+}

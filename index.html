@@ -14,16 +14,58 @@
   </head>
   <body>
     <header>
-      <main-header></main-header>
+      <nav id="main-menu" class="main-menu">
+        <div class="menu-logo">
+          <h1>WS Rastreamento</h1>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <section class="title-section">
+      <section class="hero-section">
         <h1>Rastreio prático, rápido e transparente</h1>
-        <h2>Acompanhe sua encomenda em tempo real</h2>
+        <span>Acompanhe sua encomenda em tempo real.</span>
       </section>
-      <input-search duration="3000"></input-search>
-      <result-card></result-card>
+
+      <section class="tracking-search-section">
+        <div class="tracking-search-container">
+          <input
+            type="text"
+            placeholder="Digite seu código (ex: WS923874923BR)"
+          />
+          <button class="btn-primary" id="trk-btn">Consultar</button>
+        </div>
+      </section>
+
+      <section class="tracking-results-section">
+        <div class="tracking-results-container">
+          <div class="tracking-status-container">
+            <div class="tracking-location">
+              <h1>Location</h1>
+            </div>
+
+            <div class="tracking-history">
+              <div class="tracking-timeline">
+                <h1>Timeline</h1>
+              </div>
+
+              <div class="tracking-route">
+                <h1>Route Details</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="tracking-order-details-container">
+            <div class="tracking-order-info">
+              <h1>Order Info Details</h1>
+            </div>
+
+            <div class="tracking-support-info">
+              <h1>Support</h1>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script type="module" src="js/main.js"></script>

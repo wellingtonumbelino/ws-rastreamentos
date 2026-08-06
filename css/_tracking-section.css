@@ -1,0 +1,64 @@
+.tracking-results-section {
+  max-width: 100%;
+  display: flex;
+  padding: 2rem;
+}
+
+.tracking-results-section .tracking-results-container {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.tracking-results-section
+  .tracking-results-container
+  .tracking-status-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tracking-results-section
+  .tracking-results-container
+  .tracking-order-details-container {
+  flex: 1;
+}
+
+.tracking-location {
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.tracking-history {
+  display: flex;
+  gap: 1rem;
+}
+
+.tracking-history > div {
+  flex: 1;
+  background-color: var(--color-bg-accent);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.tracking-order-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tracking-order-details-container > div {
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.tracking-order-info {
+  background-color: var(--color-bg-accent);
+}
+
+.tracking-support-info {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-on-primary);
+}
