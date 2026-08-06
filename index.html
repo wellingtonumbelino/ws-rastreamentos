@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- Header Menu -->
     <header id="app-header" class="app-header">
       <nav id="main-menu" class="main-menu width-limiter">
         <div class="menu-logo">
@@ -21,13 +22,16 @@
       </nav>
     </header>
 
+    <!-- Main Content -->
     <div class="width-limiter">
       <main>
+        <!-- Hero Section -->
         <section class="hero-section">
           <h1>Rastreio prático, rápido e transparente</h1>
           <span>Acompanhe sua encomenda em tempo real.</span>
         </section>
 
+        <!-- Tracking Search Section -->
         <section class="tracking-search-section">
           <div class="tracking-search-container">
             <input
@@ -41,16 +45,20 @@
           </div>
         </section>
 
+        <!-- Tracking Results Section -->
         <section id="trk-results-sec" class="tracking-results-section">
           <div class="tracking-results-container">
             <div class="tracking-status-container">
               <div class="tracking-location">
+                <!-- Tracking Location -->
                 <header class="tracking-location-header">
+                  <!-- Tracking Location Transport Info -->
                   <div class="tracking-location-text">
                     <span class="tracking-status-label">Status atual</span>
                     <h1>Em Transporte</h1>
                   </div>
 
+                  <!-- Tracking Order Estimate -->
                   <div class="tracking-status-info">
                     <div class="tracking-status-info-card forecast">
                       <span class="label">previsão</span>
@@ -64,11 +72,39 @@
                   </div>
                 </header>
 
-                <div class="tracking-location-route">
-                  Rota: São Paulo - SP, Brasil
+                <!-- Tracking Location Statuses -->
+                <div class="tracking-location-statuses">
+                  <div class="statuses-line-track" data-progress="50%">
+                    <!-- Status Steps -->
+                    <div class="status-step completed">
+                      <span class="status-step-dot"></span>
+                      <span class="status-step-label">postado</span>
+                    </div>
+
+                    <div class="status-step completed">
+                      <span class="status-step-dot"></span>
+                      <span class="status-step-label">coletado</span>
+                    </div>
+
+                    <div class="status-step active">
+                      <span class="status-step-dot"></span>
+                      <span class="status-step-label">enviado</span>
+                    </div>
+
+                    <div class="status-step">
+                      <span class="status-step-dot"></span>
+                      <span class="status-step-label">saiu entrega</span>
+                    </div>
+
+                    <div class="status-step">
+                      <span class="status-step-dot"></span>
+                      <span class="status-step-label">entregue</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
+              <!-- Tracking History -->
               <div class="tracking-history">
                 <div class="tracking-timeline">
                   <h1>Timeline</h1>
@@ -80,11 +116,14 @@
               </div>
             </div>
 
+            <!-- Tracking Order Details -->
             <div class="tracking-order-details-container">
+              <!-- Tracking Order Info Details -->
               <div class="tracking-order-info">
                 <h1>Order Info Details</h1>
               </div>
 
+              <!-- Support Contact -->
               <div class="tracking-support-info">
                 <h1>Support</h1>
               </div>
