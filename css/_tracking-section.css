@@ -233,6 +233,44 @@
 
 .tracking-order-info {
   background-color: var(--color-bg-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tracking-order-info .tracking-order-label {
+  font-weight: var(--font-weight-semibold);
+  color: black;
+}
+
+.tracking-order-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tracking-order-data {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-bg-subtle);
+  display: flex;
+  justify-content: space-between;
+}
+
+.tracking-order-data:last-child {
+  border-bottom: none;
+}
+
+.tracking-order-data .title {
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.tracking-order-data .text {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: black;
 }
 
 .tracking-support-info {
