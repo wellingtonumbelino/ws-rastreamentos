@@ -1,19 +1,16 @@
 .tracking-results-section {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   pointer-events: none;
   transform: translateY(24px);
   transition:
-    opacity 0.3s ease,
     transform 0.35s ease,
-    visibility 0.35s ease;
+    display 0.3s ease;
   max-width: 100%;
   padding: 2rem;
 }
 
 .tracking-results-section.is-visible {
-  opacity: 1;
-  visibility: visible;
+  display: flex;
   transform: translateY(0);
   pointer-events: auto;
 }

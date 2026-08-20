@@ -38,7 +38,7 @@ body.search-active .tracking-search-section {
 }
 
 .width-limiter > main {
-  min-height: calc(100dvh - 5rem);
+  min-height: calc(100dvh - 16rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
