@@ -1,3 +1,5 @@
+import "./layout/app-header/index.js";
+
 const inputCode = document.getElementById("trk-code-input");
 const searchBtn = document.getElementById("trk-btn");
 const resultsSection = document.getElementById("trk-results-sec");

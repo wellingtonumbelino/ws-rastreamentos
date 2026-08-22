@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  position: sticky;
+  border-bottom: 1px solid var(--color-bg-subtle);
+  background-color: var(--color-bg-main);
+}
+
+.app-header-container {
+  width: 100%;
+  padding: 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.app-header-container a {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.app-header-container a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
