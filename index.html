@@ -17,28 +17,30 @@
     <app-header></app-header>
 
     <!-- Main Content -->
+    <page-content>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1>Rastreio prático, rápido e transparente</h1>
+        <span>Acompanhe sua encomenda em tempo real.</span>
+      </section>
+
+      <!-- Tracking Search Section -->
+      <section class="tracking-search-section">
+        <div class="tracking-search-container">
+          <input
+            id="trk-code-input"
+            type="text"
+            placeholder="Digite seu código (ex: WS923874923BR)"
+          />
+          <button class="btn-primary" id="trk-btn" type="button">
+            Consultar
+          </button>
+        </div>
+      </section>
+    </page-content>
+
     <div class="width-limiter">
       <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-          <h1>Rastreio prático, rápido e transparente</h1>
-          <span>Acompanhe sua encomenda em tempo real.</span>
-        </section>
-
-        <!-- Tracking Search Section -->
-        <section class="tracking-search-section">
-          <div class="tracking-search-container">
-            <input
-              id="trk-code-input"
-              type="text"
-              placeholder="Digite seu código (ex: WS923874923BR)"
-            />
-            <button class="btn-primary" id="trk-btn" type="button">
-              Consultar
-            </button>
-          </div>
-        </section>
-
         <!-- Tracking Results Section -->
         <section id="trk-results-sec" class="tracking-results-section">
           <div class="tracking-results-container">

@@ -31,7 +31,7 @@ body.search-active .tracking-search-section {
   transform: translateY(-24px);
 }
 
-.width-limiter {
+/* .width-limiter {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -41,14 +41,7 @@ body.search-active .tracking-search-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#app-header.app-header {
-  position: sticky;
-  display: flex;
-  border-bottom: 1px solid var(--color-bg-subtle);
-  background-color: var(--color-bg-main);
-}
+} */
 
 h1 {
   font-weight: var(--font-weight-bold);

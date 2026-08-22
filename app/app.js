@@ -1,4 +1,5 @@
 import "./layout/app-header/index.js";
+import "./layout/page-content/index.js";
 
 const inputCode = document.getElementById("trk-code-input");
 const searchBtn = document.getElementById("trk-btn");

@@ -1,0 +1,11 @@
+.page-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page-content-container {
+  min-height: calc(100dvh - 16rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
