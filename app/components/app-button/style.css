@@ -1,0 +1,37 @@
+:host {
+  display: inline-block;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  padding: 0.625rem 0.75rem;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+:host(.sm) .btn {
+  padding: 0.5rem 0.625rem;
+}
+
+:host(.lg) .btn {
+  padding: 1rem 2rem;
+}
+
+:host([variant="danger"]) .btn {
+  background-color: var(--color-status-error);
+}
+
+:host([variant="danger"]) .btn:hover {
+  background-color: #b91c1c;
+}

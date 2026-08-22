@@ -16,7 +16,7 @@ class AppHeader extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <header>
         <div class="app-header-container">
-          <a aria-label="WS Rastreamento, página inicial" href="/">
+          <a aria-label="WS Rastreamento, página inicial." href="/">
             WS Rastreamento
           </a>
         </div>
