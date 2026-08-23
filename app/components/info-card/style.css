@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--color-primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  gap: 0.5rem;
+}
+
+.info-card-label {
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+}
+
+.info-card-value {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: black;
+}
+
+:host([variant="secondary"]) .info-card {
+  background-color: var(--color-bg-subtle);
+}
+
+:host([variant="secondary"]) .info-card-label {
+  color: var(--color-text-secondary);
+}
