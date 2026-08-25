@@ -8,14 +8,14 @@ class AppButton extends HTMLElement {
     this.shadowRoot.adoptedStyleSheets = [appButtonStyle];
   }
 
-  static observedAttributes = ["label"];
+  static observedAttributes = ["label", "type"];
 
   connectedCallback() {
     this.render();
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "label" && oldValue !== newValue && this.isConnected) {
+  attributeChangedCallback(_, oldValue, newValue) {
+    if (oldValue !== newValue && this.isConnected) {
       this.render();
     }
   }
