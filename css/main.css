@@ -41,11 +41,11 @@ body.search-active .tracking-search-section {
   justify-content: center;
 } */
 
-h1 {
+/* h1 {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-4xl);
   letter-spacing: -0.025em;
-}
+} */
 
 /* .btn-primary {
   background-color: var(--color-primary);

@@ -1,0 +1,7 @@
+.trk-result-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1440px;
+  padding: 1rem;
+}
