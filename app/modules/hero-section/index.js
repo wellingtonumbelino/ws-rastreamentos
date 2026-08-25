@@ -21,7 +21,7 @@ class HeroSection extends HTMLElement {
   }
 
   disconnectedCallback() {
-    this.removeEventListener("on-click", this.handleButtonClick);
+    this.removeEventListener("on-click", this.handleSubmitButtonClick);
     this.form.removeEventListener("submit", this.handleFormSubmit);
     this.input.removeEventListener("input", this.handleInput);
   }
