@@ -1,0 +1,43 @@
+.volume-details {
+  background-color: var(--color-bg-accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.volume-details-title {
+  font-weight: var(--font-weight-semibold);
+  color: black;
+}
+
+.volume-detail-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.volume-detail-info {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-bg-subtle);
+  display: flex;
+  justify-content: space-between;
+}
+
+.volume-detail-info:last-child {
+  border-bottom: none;
+}
+
+.data-text {
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.data-value {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: black;
+}
