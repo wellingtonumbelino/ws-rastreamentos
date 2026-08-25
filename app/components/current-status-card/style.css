@@ -1,0 +1,118 @@
+.trk-current-status-container {
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.trk-current-status-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trk-delivery-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.trk-delivery-info-text p,
+h2 {
+  margin: 0;
+}
+
+.trk-delivery-info-text p {
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.trk-delivery-info-text h2 {
+  color: black;
+  font-weight: var(--font-weight-black);
+  margin: 0;
+  padding: 0;
+}
+
+.trk-estimated-delivery-date {
+  display: flex;
+  gap: 1rem;
+}
+
+.trk-current-statuses-location {
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+}
+
+.statuses-line-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.statuses-line-track::before,
+.statuses-line-track::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 0.25rem;
+  transform: translateY(-50%);
+}
+
+.statuses-line-track::before {
+  width: 100%;
+  background-color: var(--color-bg-subtle);
+}
+
+.statuses-line-track::after {
+  width: var(--progress);
+  background-color: #085f28;
+}
+
+.status-step {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-step-dot {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-text-muted);
+  margin-top: 2rem;
+}
+
+.status-step-label {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+}
+
+.status-step.completed .status-step-dot {
+  background-color: #085f28;
+  box-shadow: 0 0 0 5px rgba(8, 95, 40, 0.4);
+}
+
+.status-step.completed .status-step-label {
+  color: black;
+}
+
+.status-step.active .status-step-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 0 0 5px rgb(0 52 111 / 40%);
+}
+
+.status-step.active .status-step-label {
+  color: var(--color-primary-dark);
+}
