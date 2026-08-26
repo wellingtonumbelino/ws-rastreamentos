@@ -1,6 +1,15 @@
 {
   "WS923874923BR": {
     "status": "Em trânsito",
+    "deliveryDate": "2026-03-18T03:00:00Z",
+    "lastUpdate": "2026-03-13T12:00:00Z",
+    "volume": {
+      "code": "WS923874923BR",
+      "weight": 1250,
+      "service": "Premium Express",
+      "firstName": "Eduardo",
+      "lastName": "Medeiros"
+    },
     "route": {
       "currentCity": "Rio de Janeiro",
       "cities": [
@@ -12,17 +21,17 @@
     "history": [
       {
         "description": "Objeto saiu para entrega ao destinatário",
-        "date": "13/03/2026 09:00",
+        "date": "2026-03-13T12:00:00Z",
         "location": "Unidade de Distribuição - São Paulo/SP"
       },
       {
         "description": "Objeto em trânsito - por favor aguarde",
-        "date": "12/03/2026 14:30",
+        "date": "2026-03-12T17:30:00Z",
         "location": "Unidade de Tratamento - Rio de Janeiro/RJ"
       },
       {
         "description": "Objeto postado",
-        "date": "11/03/2026 10:00",
+        "date": "2026-03-11T13:00:00Z",
         "location": "Agência dos Correios - Curitiba/PR"
       }
     ]

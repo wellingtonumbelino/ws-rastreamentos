@@ -21,11 +21,29 @@ class TrkResultSection extends HTMLElement {
       const trackingData = await response.json();
       const tracking = trackingData[trackingCode];
       const statusCard = this.shadowRoot.querySelector("current-status-card");
+      const volumeDetails = this.shadowRoot.querySelector("volume-details");
       const history = this.shadowRoot.querySelector("trk-history");
       const route = this.shadowRoot.querySelector("trk-route");
 
       if (tracking && statusCard) {
         statusCard.setAttribute("status", tracking.status);
+        statusCard.setAttribute("delivery-date", tracking.deliveryDate);
+        statusCard.setAttribute("last-update", tracking.lastUpdate);
+      }
+
+      if (tracking?.volume && volumeDetails) {
+        for (const field of ["code", "weight", "service"]) {
+          volumeDetails.setAttribute(field, tracking.volume[field] ?? "");
+        }
+
+        volumeDetails.setAttribute(
+          "recipient-first-name",
+          tracking.volume.firstName ?? "",
+        );
+        volumeDetails.setAttribute(
+          "recipient-last-name",
+          tracking.volume.lastName ?? "",
+        );
       }
 
       if (tracking && history) {
@@ -49,8 +67,8 @@ class TrkResultSection extends HTMLElement {
       <section class="trk-result-section">
         <aside class="trk-result-col">
           <current-status-card
-            delivery-date="15 JAN 2025"
-            last-update="Hoje, 10:49"
+            delivery-date=""
+            last-update=""
           ></current-status-card>
         
           <div class="trk-history-route">
@@ -61,10 +79,11 @@ class TrkResultSection extends HTMLElement {
 
         <aside class="trk-result-col">
           <volume-details
-            code="WS923874923BR"
-            weight="1.250 kg"
-            service="Premium Express"
-            recipient="Eduardo M."
+            code=""
+            weight=""
+            service=""
+            recipient-first-name=""
+            recipient-last-name=""
           ></volume-details>
 
           <support-contact></support-contact>

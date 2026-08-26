@@ -22,6 +22,26 @@ class TrkHistory extends HTMLElement {
     return this._history;
   }
 
+  formatDate(value) {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+      return value ?? "";
+    }
+
+    return new Intl.DateTimeFormat("pt-BR", {
+      timeZone: "America/Sao_Paulo",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+      .format(date)
+      .replace(" de ", " ")
+      .replace(" de ", " ");
+  }
+
   connectedCallback() {
     this.render();
   }
@@ -53,7 +73,9 @@ class TrkHistory extends HTMLElement {
         </div>
       `;
 
-      item.querySelector(".timeline-meta").textContent = event.date ?? "";
+      item.querySelector(".timeline-meta").textContent = this.formatDate(
+        event.date,
+      );
       item.querySelector(".timeline-status").textContent =
         event.description ?? "";
       item.querySelector(".timeline-location").textContent =

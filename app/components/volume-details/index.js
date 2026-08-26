@@ -8,7 +8,13 @@ class VolumeDetails extends HTMLElement {
     this.shadowRoot.adoptedStyleSheets = [VolumeDetailsStyle];
   }
 
-  static observedAttributes = ["code", "weight", "service", "recipient"];
+  static observedAttributes = [
+    "code",
+    "weight",
+    "service",
+    "recipient-first-name",
+    "recipient-last-name",
+  ];
 
   connectedCallback() {
     this.render();
@@ -18,6 +24,30 @@ class VolumeDetails extends HTMLElement {
     if (oldValue !== newValue && this.isConnected) {
       this.render();
     }
+  }
+
+  formatWeight(value) {
+    const weightInGrams = Number(value);
+
+    if (!Number.isFinite(weightInGrams) || weightInGrams < 0) {
+      return "";
+    }
+
+    if (weightInGrams >= 1000) {
+      const weightInKilograms = weightInGrams / 1000;
+      return `${weightInKilograms.toLocaleString("pt-BR", {
+        maximumFractionDigits: 3,
+      })} kg`;
+    }
+
+    return `${weightInGrams.toLocaleString("pt-BR")} g`;
+  }
+
+  formatRecipient(firstName, lastName) {
+    const name = firstName.trim();
+    const surnameInitial = lastName.trim().charAt(0);
+
+    return name && surnameInitial ? `${name} ${surnameInitial}.` : name;
   }
 
   render() {
@@ -46,12 +76,20 @@ class VolumeDetails extends HTMLElement {
       </div>
     `;
 
-    for (const field of this.constructor.observedAttributes) {
+    for (const field of ["code", "weight", "service"]) {
       const valueElement = this.shadowRoot.querySelector(
         `[data-field="${field}"]`,
       );
-      valueElement.textContent = this.getAttribute(field) ?? "";
+      const value = this.getAttribute(field);
+      valueElement.textContent =
+        field === "weight" ? this.formatWeight(value) : (value ?? "");
     }
+
+    this.shadowRoot.querySelector('[data-field="recipient"]').textContent =
+      this.formatRecipient(
+        this.getAttribute("recipient-first-name") ?? "",
+        this.getAttribute("recipient-last-name") ?? "",
+      );
   }
 }
 

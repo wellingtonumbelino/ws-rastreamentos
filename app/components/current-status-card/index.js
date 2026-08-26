@@ -38,6 +38,25 @@ class CurrentStatusCard extends HTMLElement {
     );
   }
 
+  formatDate(value, includeTime = false) {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+      return value ?? "";
+    }
+
+    return new Intl.DateTimeFormat("pt-BR", {
+      timeZone: "America/Sao_Paulo",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      ...(includeTime && { hour: "2-digit", minute: "2-digit" }),
+    })
+      .format(date)
+      .replace(" de ", " ")
+      .replace(" de ", " ");
+  }
+
   render() {
     const currentStepIndex = this.getCurrentStepIndex();
     const progress = currentStepIndex < 0 ? 0 : (currentStepIndex / 4) * 100;
@@ -85,7 +104,11 @@ class CurrentStatusCard extends HTMLElement {
 
     for (const field of ["delivery-date", "last-update"]) {
       const infoCard = this.shadowRoot.querySelector(`[data-field="${field}"]`);
-      infoCard.setAttribute("value", this.getAttribute(field) ?? "");
+      const value = this.getAttribute(field);
+      infoCard.setAttribute(
+        "value",
+        this.formatDate(value, field === "last-update"),
+      );
     }
   }
 }
