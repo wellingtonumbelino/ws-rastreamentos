@@ -5,3 +5,8 @@
   max-width: 1440px;
   padding: 1rem;
 }
+
+.trk-history-route {
+  display: flex;
+  gap: 2rem;
+}

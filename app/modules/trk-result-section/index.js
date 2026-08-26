@@ -22,6 +22,7 @@ class TrkResultSection extends HTMLElement {
       const tracking = trackingData[trackingCode];
       const statusCard = this.shadowRoot.querySelector("current-status-card");
       const history = this.shadowRoot.querySelector("trk-history");
+      const route = this.shadowRoot.querySelector("trk-route");
 
       if (tracking && statusCard) {
         statusCard.setAttribute("status", tracking.status);
@@ -29,6 +30,11 @@ class TrkResultSection extends HTMLElement {
 
       if (tracking && history) {
         history.history = tracking.history;
+      }
+
+      if (tracking && route) {
+        route.status = tracking.status;
+        route.route = tracking.route;
       }
     } catch (error) {
       console.error(
@@ -53,8 +59,9 @@ class TrkResultSection extends HTMLElement {
           recipient="Eduardo M."
         ></volume-details>
 
-        <div>
+        <div class="trk-history-route">
           <trk-history></trk-history>
+          <trk-route></trk-route>
         </div>
 
         <support-contact></support-contact>

@@ -1,6 +1,14 @@
 {
   "WS923874923BR": {
     "status": "Em trânsito",
+    "route": {
+      "currentCity": "Rio de Janeiro",
+      "cities": [
+        { "acronym": "CTB", "name": "Curitiba" },
+        { "acronym": "RJ", "name": "Rio de Janeiro" },
+        { "acronym": "SP", "name": "São Paulo" }
+      ]
+    },
     "history": [
       {
         "description": "Objeto saiu para entrega ao destinatário",
