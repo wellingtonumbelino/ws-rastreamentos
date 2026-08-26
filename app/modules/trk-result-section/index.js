@@ -13,6 +13,14 @@ class TrkResultSection extends HTMLElement {
     this.loadTrackingData();
   }
 
+  static observedAttributes = ["tracking-code"];
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "tracking-code" && oldValue !== newValue && this.isConnected) {
+      this.loadTrackingData();
+    }
+  }
+
   async loadTrackingData() {
     const trackingCode = this.getAttribute("tracking-code") ?? "WS923874923BR";
 
@@ -64,7 +72,7 @@ class TrkResultSection extends HTMLElement {
 
   render() {
     this.shadowRoot.innerHTML = `
-      <section class="trk-result-section">
+      <section class="trk-result-section" aria-live="polite">
         <aside class="trk-result-col">
           <current-status-card
             delivery-date=""

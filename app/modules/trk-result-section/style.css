@@ -1,3 +1,26 @@
+:host {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(24px);
+  transition:
+    max-height 0.45s ease-in,
+    opacity 0.45s ease-in,
+    transform 0.45s ease-in;
+  visibility: hidden;
+}
+
+:host(.is-visible) {
+  max-height: 100rem;
+  opacity: 1;
+  overflow: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
+}
+
 .trk-result-section {
   display: flex;
   gap: 2rem;

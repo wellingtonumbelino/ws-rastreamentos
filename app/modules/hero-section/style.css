@@ -7,6 +7,7 @@
   transition:
     transform 0.35s ease,
     opacity 0.35s ease;
+  padding: 1rem;
 }
 
 .hero-section:focus-visible {

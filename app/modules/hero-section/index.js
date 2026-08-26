@@ -6,6 +6,9 @@ class HeroSection extends HTMLElement {
 
     this.attachShadow({ mode: "open" });
     this.shadowRoot.adoptedStyleSheets = [heroSectionStyles];
+    this.handleSubmitButtonClick = this.handleSubmitButtonClick.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleInput = this.handleInput.bind(this);
   }
 
   connectedCallback() {
@@ -30,7 +33,7 @@ class HeroSection extends HTMLElement {
     const code = this.input.value.trim().toUpperCase();
     const codePattern = /^WS\d{9}BR$/;
 
-    if (code.length !== 13 && !codePattern.test(code)) {
+    if (!codePattern.test(code)) {
       const message = "Digite um código válido no formato WS923874923BR.";
 
       this.errorMessage.textContent = message;
@@ -50,9 +53,13 @@ class HeroSection extends HTMLElement {
   handleFormSubmit(event) {
     event.preventDefault();
 
-    console.log(event);
+    const resultsSection = document.querySelector("trk-result-section");
 
-    const resultsSection = document.getElementById("trk-results-sec");
+    if (!resultsSection) {
+      return;
+    }
+
+    resultsSection.setAttribute("tracking-code", this.input.value);
     document.body.classList.add("search-active");
     resultsSection.classList.add("is-visible");
   }

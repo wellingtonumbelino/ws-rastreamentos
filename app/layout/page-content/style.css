@@ -4,7 +4,7 @@
 }
 
 .page-content-container {
-  min-height: calc(100dvh - 16rem);
+  min-height: calc(100dvh - 18rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
