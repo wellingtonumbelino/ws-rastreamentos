@@ -47,24 +47,29 @@ class TrkResultSection extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <section class="trk-result-section">
-        <current-status-card
-          delivery-date="15 JAN 2025"
-          last-update="Hoje, 10:49"
-        ></current-status-card>
+        <aside class="trk-result-col">
+          <current-status-card
+            delivery-date="15 JAN 2025"
+            last-update="Hoje, 10:49"
+          ></current-status-card>
+        
+          <div class="trk-history-route">
+            <trk-history></trk-history>
+            <trk-route></trk-route>
+          </div>
+        </aside>
 
-        <volume-details
-          code="WS923874923BR"
-          weight="1.250 kg"
-          service="Premium Express"
-          recipient="Eduardo M."
-        ></volume-details>
+        <aside class="trk-result-col">
+          <volume-details
+            code="WS923874923BR"
+            weight="1.250 kg"
+            service="Premium Express"
+            recipient="Eduardo M."
+          ></volume-details>
 
-        <div class="trk-history-route">
-          <trk-history></trk-history>
-          <trk-route></trk-route>
-        </div>
+          <support-contact></support-contact>
+        </aside>
 
-        <support-contact></support-contact>
       </section>
     `;
   }

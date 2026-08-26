@@ -1,9 +1,14 @@
 .trk-result-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
   gap: 2rem;
   max-width: 1440px;
   padding: 1rem;
+}
+
+.trk-result-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .trk-history-route {
