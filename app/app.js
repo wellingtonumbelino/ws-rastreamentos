@@ -7,6 +7,7 @@ import "./components/app-button/index.js";
 import "./components/info-card/index.js";
 import "./components/current-status-card/index.js";
 import "./components/volume-details/index.js";
+import "./components/trk-history/index.js";
 
 // Sections | Modules
 import "./modules/hero-section/index.js";

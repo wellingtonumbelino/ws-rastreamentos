@@ -21,9 +21,14 @@ class TrkResultSection extends HTMLElement {
       const trackingData = await response.json();
       const tracking = trackingData[trackingCode];
       const statusCard = this.shadowRoot.querySelector("current-status-card");
+      const history = this.shadowRoot.querySelector("trk-history");
 
       if (tracking && statusCard) {
         statusCard.setAttribute("status", tracking.status);
+      }
+
+      if (tracking && history) {
+        history.history = tracking.history;
       }
     } catch (error) {
       console.error(
@@ -47,6 +52,10 @@ class TrkResultSection extends HTMLElement {
           service="Premium Express"
           recipient="Eduardo M."
         ></volume-details>
+
+        <div>
+          <trk-history></trk-history>
+        </div>
       </section>
     `;
   }
