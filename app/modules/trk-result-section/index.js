@@ -56,6 +56,8 @@ class TrkResultSection extends HTMLElement {
         <div>
           <trk-history></trk-history>
         </div>
+
+        <support-contact></support-contact>
       </section>
     `;
   }
