@@ -19,6 +19,9 @@ class AppHeader extends HTMLElement {
           <a aria-label="WS Rastreamento, página inicial." href="/">
             WS Rastreamento
           </a>
+          <div class="app-header-end">
+            <app-help></app-help>
+          </div>
         </div>
       </header>
     `;
