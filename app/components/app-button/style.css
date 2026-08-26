@@ -28,10 +28,23 @@
   padding: 1rem 2rem;
 }
 
+:host(.w-full) .btn {
+  width: 100%;
+}
+
 :host([variant="danger"]) .btn {
   background-color: var(--color-status-error);
 }
 
 :host([variant="danger"]) .btn:hover {
   background-color: #b91c1c;
+}
+
+:host([variant="secondary"]) .btn {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+}
+
+:host([variant="secondary"]) .btn:hover {
+  background-color: var(--color-bg-accent);
 }
