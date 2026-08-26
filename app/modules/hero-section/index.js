@@ -91,7 +91,7 @@ class HeroSection extends HTMLElement {
             maxlength="13"
             name="trackingCode"
             pattern="WS[0-9]{9}BR"
-            placeholder="Digite seu código (ex: WS923874923BR)"
+            placeholder="Digite seu código (ex: WS123456789BR)"
             required
             type="text"
           />
