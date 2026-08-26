@@ -1,7 +1,5 @@
 @import url("./theme.css");
 
-@import url("./_tracking-section.css");
-
 html,
 body,
 :root {
@@ -28,41 +26,6 @@ body.search-active .tracking-search-section {
   margin-top: 1.5rem;
   transform: translateY(-24px);
 }
-
-/* .width-limiter {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.width-limiter > main {
-  min-height: calc(100dvh - 16rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
-/* h1 {
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-4xl);
-  letter-spacing: -0.025em;
-} */
-
-/* .btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-  border-radius: var(--radius-md);
-  font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  transition: background-color 0.2s ease;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-primary-dark);
-} */
 
 footer {
   background-color: var(--color-bg-subtle);
