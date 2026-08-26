@@ -1,0 +1,38 @@
+import IconButtonStyle from "./style.css" with { type: "css" };
+
+class IconButton extends HTMLElement {
+  constructor() {
+    super();
+
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.adoptedStyleSheets = [IconButtonStyle];
+  }
+
+  static observedAttributes = ["icon"];
+
+  connectedCallback() {
+    this.render();
+  }
+
+  attributeChangedCallback(_, oldValue, newValue) {
+    if (oldValue !== newValue && this.isConnected) {
+      this.render();
+    }
+  }
+
+  render() {
+    const iconName = this.getAttribute("icon") ?? "";
+    const button = document.createElement("button");
+    const icon = document.createElement("img");
+
+    button.type = "button";
+    button.setAttribute("aria-label", iconName.replace(/\.svg$/, ""));
+    icon.alt = "";
+    icon.src = new URL(`../../../images/icons/${iconName}`, import.meta.url);
+    icon.setAttribute("aria-hidden", "true");
+    button.append(icon);
+    this.shadowRoot.replaceChildren(button);
+  }
+}
+
+customElements.define("icon-button", IconButton);
