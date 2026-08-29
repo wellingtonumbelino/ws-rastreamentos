@@ -95,7 +95,7 @@ class HeroSection extends HTMLElement {
             required
             type="text"
           />
-          <app-button class="lg" label="consultar" type="submit"></app-button>
+          <app-button class="lg w-full" label="consultar" type="submit"></app-button>
         </form>
         
         <p aria-live="polite" id="tracking-code-error"></p>

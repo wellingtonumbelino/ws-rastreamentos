@@ -26,6 +26,7 @@
   gap: 2rem;
   max-width: 1440px;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 .trk-result-col {
@@ -37,4 +38,11 @@
 .trk-history-route {
   display: flex;
   gap: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .trk-result-section,
+  .trk-history-route {
+    flex-direction: column;
+  }
 }

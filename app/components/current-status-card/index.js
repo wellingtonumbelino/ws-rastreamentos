@@ -85,11 +85,15 @@ class CurrentStatusCard extends HTMLElement {
                     : index === currentStepIndex
                       ? "active"
                       : "";
+                const mobileLabel =
+                  step.label === "saiu entrega"
+                    ? 'data-mobile-label="SAIU"'
+                    : "";
 
                 return `
                   <div class="status-step ${state}" role="listitem">
                     <span class="status-step-dot"></span>
-                    <span class="status-step-label">${step.label}</span>
+                    <span class="status-step-label"${mobileLabel}>${step.label}</span>
                   </div>
                 `;
               })

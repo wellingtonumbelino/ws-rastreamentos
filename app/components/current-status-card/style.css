@@ -116,3 +116,35 @@ h2 {
 .status-step.active .status-step-label {
   color: var(--color-primary-dark);
 }
+
+@media (max-width: 48rem) {
+  .trk-current-status-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .status-step-label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .status-step-label[data-mobile-label] {
+    font-size: 0;
+  }
+
+  .status-step-label[data-mobile-label]::after {
+    content: attr(data-mobile-label);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .status-step-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .status-step.active .status-step-dot {
+    width: 1rem;
+    height: 1rem;
+  }
+}
