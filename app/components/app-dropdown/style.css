@@ -1,0 +1,118 @@
+:host {
+  display: inline-block;
+  width: 100%;
+  min-width: 180px;
+  font-family: inherit;
+  color: #1f2937;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dropdown-trigger:hover:not(:disabled),
+.dropdown-trigger:focus-visible:not(:disabled) {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  outline: none;
+}
+
+.dropdown-trigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dropdown-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  flex: 1;
+}
+
+.dropdown-arrow {
+  font-size: 0.9rem;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.dropdown-menu[hidden] {
+  display: none;
+}
+
+.dropdown-option {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.dropdown-option:hover:not(:disabled),
+.dropdown-option:focus-visible:not(:disabled) {
+  background: #eff6ff;
+  outline: none;
+}
+
+.dropdown-option.is-selected {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.dropdown-option:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.dropdown-empty {
+  display: block;
+  padding: 10px 12px;
+  color: #6b7280;
+  font-size: 0.92rem;
+}
