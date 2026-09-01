@@ -13,6 +13,8 @@ import "./components/support-contact/index.js";
 import "./components/trk-route/index.js";
 import "./components/icon-button/index.js";
 import "./components/app-help/index.js";
+import "./components/app-dropdown/index.js";
+import "./components/support-modal/index.js";
 
 // Sections | Modules
 import "./modules/hero-section/index.js";
